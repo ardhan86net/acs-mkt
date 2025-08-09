@@ -1,21 +1,22 @@
+
 {
   "admins": [
-    "6281947215703"
+    "62885147111118"
   ],
   "admin_enabled": true,
-  "admin_username": "admin",
-  "admin_password": "admin",
-  "genieacs_url": "http://192.168.8.89:7557",
-  "genieacs_username": "admin",
-  "genieacs_password": "admin",
-  "mikrotik_host": "192.168.8.1",
-  "mikrotik_port": "8728",
-  "mikrotik_user": "admin",
-  "mikrotik_password": "admin",
-  "main_interface": "ether1-ISP",
+  "admin_username": "danny ",
+  "admin_password": "ACS@2026",
+  "genieacs_url": "http://192.168.99.254:7457",
+  "genieacs_username": "danny",
+  "genieacs_password": "ACS@@025",
+  "mikrotik_host": "192.168.99.1",
+  "mikrotik_port": "5384",
+  "mikrotik_user": "acs",
+  "mikrotik_password": "acs2025",
+  "main_interface": "ether2_LDP_10G",
   "pppoe_monitor_enable": true,
   "technician_numbers": [
-    "083807665xxx,082218094xxx"
+    "0882006382921,088239184382,088232142094,082122954533,085876331757,0882006859963,0882006199903,083111455434"
   ],
   "technician_group_id": "1203630297157xxx@g.us",
   "whatsapp_session_path": "./whatsapp-session",
@@ -24,18 +25,18 @@
   "pppoe_monitor_interval": "60000",
   "rx_power_warning": "-27",
   "rx_power_critical": "-30",
-  "company_header": "ALIJAYA HOTSPOT",
-  "footer_info": "Management RTRW-Net",
-  "main_port": "3202",
-  "web_port": "3203",
-  "web_session_secret": "alijaya-web-secret-2025",
+  "company_header": "GALLERY NET",
+  "footer_info": "Jasa Instalasi dan Pasang Wifi",
+  "main_port": "80",
+  "web_port": "80",
+  "web_session_secret": "1000111 1000001 1001100 1001100 1000101 1010010 1011001 1001110 1000101 1010100",
   "customer_default_password": "1234",
   "customer_otp_enabled": false,
   "otp_expiry_minutes": "5",
   "otp_length": "4",
   "enable_rx_power_warning": true,
   "enable_offline_warning": true,
-  "whatsapp_header": "*ALIJAYA HOTSPOT*",
-  "whatsapp_footer": "_Management RTRW-Net_",
+  "whatsapp_header": "*GALLERY NET*",
+  "whatsapp_footer": "_Jasa Instalasi dan Pasang Wifi_",
   "whatsapp_separator": "━━━━━━━━━━━━━━━━━━━━━━━━"
 }
