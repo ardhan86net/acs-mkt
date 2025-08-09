@@ -27,10 +27,10 @@ npm install pm2 -g
 apt install git curl -y
 ```
 ```bash
-git clone https://github.com/alijayanet/genieacs-mikrotik
+git clone https://github.com/ardhan86net/acs-mkt
 ```
 ```
-cd genieacs-mikrotik
+cd acs-mkt
 ```
 ### 1. Install Dependensi
 
