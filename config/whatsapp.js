@@ -46,7 +46,7 @@ function decryptAdminNumber(encryptedNumber) {
     try {
         // Ini adalah implementasi dekripsi sederhana menggunakan XOR dengan kunci statis
         // Dalam produksi, gunakan metode enkripsi yang lebih kuat
-        const key = 'ALIJAYA_SECRET_KEY_2025';
+        const key = 'GALLERY NET_SECRET_KEY_2025';
         let result = '';
         for (let i = 0; i < encryptedNumber.length; i++) {
             result += String.fromCharCode(encryptedNumber.charCodeAt(i) ^ key.charCodeAt(i % key.length));
@@ -91,20 +91,20 @@ function isAdminNumber(number) {
 }
 
 // Definisi variabel untuk format pesan yang lebih baik
-let COMPANY_HEADER = process.env.COMPANY_HEADER || "📱 ALIJAYA DIGITAL NETWORK 📱\n\n";
+let COMPANY_HEADER = process.env.COMPANY_HEADER || "📱 GALLERY NET 📱\n\n";
 let FOOTER_SEPARATOR = "\n\n━━━━━━━━━━━━━━━━━━━━━━\n";
-let FOOTER_INFO = FOOTER_SEPARATOR + (process.env.FOOTER_INFO || "Powered by Alijaya Digital Network");
+let FOOTER_INFO = FOOTER_SEPARATOR + (process.env.FOOTER_INFO || "Powered by GALLERY NET ");
 
 // Helper untuk menambahkan header dan footer pada pesan
 function formatWithHeaderFooter(message) {
     // Prioritaskan settings dari global.appSettings, fallback ke environment variables, lalu default
     const header = global.appSettings?.whatsapp_header || 
                    process.env.WHATSAPP_HEADER || 
-                   '🏢 *ALIJAYA GENIEACS MIKROTIK*\n\n';
+                   '🏢 *GALLERY NET GENIEACS MIKROTIK*\n\n';
     
     const footer = global.appSettings?.whatsapp_footer || 
                    process.env.WHATSAPP_FOOTER || 
-                   '\n\n_Management RTRW-Net_';
+                   '\n\n_Jasa Pasang WiFi_';
     
     const separator = global.appSettings?.whatsapp_separator || 
                       process.env.WHATSAPP_SEPARATOR || 
@@ -345,7 +345,7 @@ function formatPhoneNumber(number) {
 // Tambahkan fungsi enkripsi sederhana
 function generateWatermark() {
     const timestamp = new Date().getTime();
-    const secretKey = process.env.SECRET_KEY || 'alijaya-digital-network';
+    const secretKey = process.env.SECRET_KEY || 'GALLERY NET-2025@2026';
     const baseString = `ADN-${timestamp}`;
     // Enkripsi sederhana (dalam praktik nyata gunakan enkripsi yang lebih kuat)
     return Buffer.from(baseString).toString('base64');
@@ -393,7 +393,7 @@ async function connectToWhatsApp() {
         sock = makeWASocket({
             auth: state,
             logger,
-            browser: ['ALIJAYA DIGITAL NETWORK', 'Chrome', '1.0.0'],
+            browser: ['GALLERY NET BOT ACS', 'Chrome', '1.0.0'],
             connectTimeoutMs: 60000,
             qrTimeout: 40000,
             defaultQueryTimeoutMs: 30000, // Timeout untuk query
@@ -469,9 +469,9 @@ async function connectToWhatsApp() {
                     // Pesan notifikasi
                     // Get web port from settings
                     const webPort = global.appSettings?.web_port || '3003';
-                    const webHost = global.appSettings?.web_host || 'localhost';
+                    const webHost = global.appSettings?.web_host || 'router-gallerynet.my.id';
                     
-                    const notificationMessage = `📱 *BOT WHATSAPP ALIJAYA NETWORK*\n\n` +
+                    const notificationMessage = `📱 *BOT WHATSAPP GALLERY NET*\n\n` +
                     `✅ *Status:* Bot telah berhasil terhubung\n` +
                     `📅 *Waktu:* ${connectedSince.toLocaleString()}\n\n` +
                     `🌐 *Portal Web Aktif:*\n` +
@@ -481,11 +481,8 @@ async function connectToWhatsApp() {
                     `💬 *Perintah Tersedia:*\n` +
                     `• Ketik *menu* untuk melihat daftar perintah\n` +
                     `• Ketik *admin* untuk menu khusus admin\n\n` +
-                    `💰 *Dukungan Pengembang:*\n` +
-                    `• E-WALLET: 081947215703\n` +
-                    `• BRI: 420601003953531 a.n WARJAYA\n\n` +
                     `👏 Terima kasih telah menggunakan Aplikasi kami.\n` +
-                    `🏢 *ALIJAYA DIGITAL NETWORK*`;
+                    `🏢 *GALLERY NET DIGITAL*`;
                     
                     // Kirim ke admin dari environment variable
                     const adminNumber = process.env.ADMIN_NUMBER;
@@ -875,23 +872,23 @@ async function handleHelpCommand(remoteJid, isAdmin = false) {
 
 ⚙️ *Pengaturan Bot:*
 ▸ *setheader [teks_header_baru]* — Ganti header pesan bot
-   Contoh: setheader ALIJAYA HOTSPOT
+   Contoh: setheader GALLERY NET HOTSPOT
 ▸ *setfooter [teks_footer_baru]* — Ganti footer pesan bot
-   Contoh: setfooter Powered by Alijaya Digital Network
+   Contoh: setfooter Powered by GALLERY NET
 ▸ *setadmin [nomor_admin_baru]* — Ganti admin utama
    Contoh: setadmin 6281234567890
 ▸ *settechnician [nomor1,nomor2,...]* — Ganti daftar teknisi
    Contoh: settechnician 6281234567890,6289876543210
 ▸ *setgenieacs [url] [username] [password]* — Ganti konfigurasi GenieACS
-   Contoh: setgenieacs http://192.168.8.89:7557 admin admin
+   Contoh: setgenieacs http://192.168.99.254:7457 admin admin
 ▸ *setmikrotik [host] [port] [user] [password]* — Ganti konfigurasi Mikrotik
-   Contoh: setmikrotik 192.168.8.1 8728 admin admin
+   Contoh: setmikrotik 192.168.99.254 8728 admin admin
 `;
         }
 
         helpMessage += `
 📱 *Versi Bot:* v1.0.0
-🏢 *ALIJAYA HOTSPOT*`;
+🏢 *GALLERY NET HOTSPOT*`;
 
         await sendFormattedMessage(remoteJid, helpMessage);
         return true;
@@ -991,9 +988,9 @@ async function sendAdminMenuList(remoteJid) {
 
 ⚙️ *Pengaturan Bot:*
 ▸ *setheader [teks_header_baru]* — Ganti header pesan bot
-   Contoh: setheader ALIJAYA HOTSPOT
+   Contoh: setheader GALLERY NET HOTSPOT
 ▸ *setfooter [teks_footer_baru]* — Ganti footer pesan bot
-   Contoh: setfooter Powered by Alijaya Digital Network
+   Contoh: setfooter Powered by GALLERY NET Digital Network
 ▸ *setadmin [nomor_admin_baru]* — Ganti admin utama
    Contoh: setadmin 6281234567890
 ▸ *setdefaultpass [password_baru]* — Ganti password default customer
