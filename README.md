@@ -27,7 +27,7 @@ npm install pm2 -g
 apt install git curl -y
 ```
 ```bash
-git clone https://github.com/ardhan86net/acs-mkt
+git clone https://github.com/aristanet2026/acs-mkt
 ```
 ```
 cd acs-mkt
