@@ -56,25 +56,25 @@ const settingsFromFile = loadSettings();
 global.appSettings = {
   // Server
   port: settingsFromFile.main_port || settingsFromFile.web_port || '3501',
-  host: settingsFromFile.web_host || 'localhost',
+  host: settingsFromFile.web_host || 'router-gallerynet.my.id',
 
   // Admin
-  adminUsername: settingsFromFile.admin_username || 'admin',
-  adminPassword: settingsFromFile.admin_password || 'admin',
+  adminUsername: settingsFromFile.admin_username || 'danny',
+  adminPassword: settingsFromFile.admin_password || 'ACS@2026',
 
   // GenieACS
-  genieacsHost: settingsFromFile.genieacs_host || '192.168.8.89',
-  genieacsPort: settingsFromFile.genieacs_port || '7557',
-  genieacsUrl: settingsFromFile.genieacs_url || `http://${settingsFromFile.genieacs_host || '192.168.8.89'}:${settingsFromFile.genieacs_port || '7557'}`,
-  genieacsUsername: settingsFromFile.genieacs_username || '',
-  genieacsPassword: settingsFromFile.genieacs_password || '',
+  genieacsHost: settingsFromFile.genieacs_host || '192.168.99.254',
+  genieacsPort: settingsFromFile.genieacs_port || '7457',
+  genieacsUrl: settingsFromFile.genieacs_url || `http://${settingsFromFile.genieacs_host || '192.168.99.254'}:${settingsFromFile.genieacs_port || '7457'}`,
+  genieacsUsername: settingsFromFile.genieacs_username || 'danny',
+  genieacsPassword: settingsFromFile.genieacs_password || 'ACS@2025',
   genieApiUrl: settingsFromFile.genie_api_url || '',
 
   // Mikrotik
-  mikrotikHost: settingsFromFile.mikrotik_host || '192.168.8.1',
-  mikrotikPort: settingsFromFile.mikrotik_port || '8700',
-  mikrotikUser: settingsFromFile.mikrotik_user || 'admin',
-  mikrotikPassword: settingsFromFile.mikrotik_password || '',
+  mikrotikHost: settingsFromFile.mikrotik_host || '192.168.99.1',
+  mikrotikPort: settingsFromFile.mikrotik_port || '5384',
+  mikrotikUser: settingsFromFile.mikrotik_user || 'acs',
+  mikrotikPassword: settingsFromFile.mikrotik_password || 'acs2025',
 
   // WhatsApp
   adminNumber: settingsFromFile.admin_number || '',
@@ -189,7 +189,7 @@ function startServer(portToUse) {
     try {
         const server = app.listen(portToUse, () => {
             logger.info(`✅ Server berhasil berjalan pada port ${portToUse}`);
-            logger.info(`🌐 Health check tersedia di: http://localhost:${portToUse}/health`);
+            logger.info(`🌐 Health check tersedia di: http://router-gallerynet.my.id/:${portToUse}/health`);
             logger.info(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
             // Keep port consistent with configured value
             global.appSettings.port = portToUse.toString();
